@@ -9,9 +9,20 @@ import {
   IonIcon,
   IonButton,
   IonContent,
+  IonListHeader,
   IonList,
   IonItem,
-  IonLabel
+  IonLabel,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent,
+  IonBadge,
+  IonNote,
+  IonProgressBar
 } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
@@ -31,9 +42,20 @@ import { RouterLink } from '@angular/router';
     IonIcon,
     IonButton,
     IonContent,
+    IonListHeader,
     IonList,
     IonItem,
-    IonLabel
+    IonLabel,
+    IonGrid,
+    IonRow,
+    IonCol,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardContent,
+    IonBadge,
+    IonNote,
+    IonProgressBar
   ],
 })
 export class Tab1Page {

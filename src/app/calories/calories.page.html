@@ -1,0 +1,119 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Calories Info</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding calories-page">
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <ion-icon name="fitness-outline" class="hero-icon"></ion-icon>
+    <h1 class="hero-title">Understanding Calories</h1>
+    <p class="hero-subtitle">
+      Learn why taking the right amount of calories is essential for your health.
+    </p>
+  </div>
+
+  <!-- Info Cards -->
+  <ion-card class="info-card">
+    <ion-card-header>
+      <ion-card-title>What are Calories?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Calories are the energy you get from the food you eat. They fuel your body to perform daily activities, exercise, and maintain vital functions.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="info-card">
+    <ion-card-header>
+      <ion-card-title>Importance of Perfect Intake</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Consuming the right amount of calories helps maintain your ideal body weight, improves energy levels, and supports overall health. Too few or too many calories can lead to fatigue, weight changes, and health issues.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="info-card">
+    <ion-card-header>
+      <ion-card-title>Tips for Managing Calories</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>Track your daily calorie intake</li>
+        <li>Balance calories with physical activity</li>
+        <li>Include nutrient-rich foods</li>
+        <li>Avoid excessive processed sugars</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!-- Inline CSS -->
+<style>
+  .calories-page {
+    --background: linear-gradient(to bottom, #fffdfb, #f1f5f9);
+  }
+
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .hero-icon {
+    font-size: 4rem;
+    color: var(--ion-color-primary);
+    margin-bottom: 10px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--ion-color-primary);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+    padding: 0 15px;
+  }
+
+  /* Info Cards */
+  .info-card {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  }
+
+  ion-card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ion-color-primary);
+  }
+
+  ion-card-content p, ion-card-content li {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+  }
+
+  ion-card-content ul {
+    padding-left: 18px;
+  }
+
+  ion-card-content li {
+    margin-bottom: 6px;
+  }
+</style>

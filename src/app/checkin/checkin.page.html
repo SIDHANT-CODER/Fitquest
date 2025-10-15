@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <!-- Back Button -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+
+    <!-- Title -->
+    <ion-title class="ion-text-center">Check-In</ion-title>
+
+    <!-- Notifications -->
+    <ion-buttons slot="end">
+      <ion-button routerLink="/tabs/notification">
+        <ion-icon slot="icon-only" name="notifications-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="checkin-page">
+
+  <!-- Last Login Card -->
+  <ion-card class="last-login-card">
+    <ion-card-header>
+      <ion-card-title>Last Check-In</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-icon name="time-outline"></ion-icon>
+      <p><strong>21 Sept 2025</strong> at <strong>07:45 AM</strong></p>
+      <ion-button expand="block" color="success" shape="round" class="checkin-btn">
+        Check-In Now
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Reminder Notification Card -->
+  <ion-card class="reminder-card">
+    <ion-card-header>
+      <ion-card-title>Set Reminder</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Get notified if you haven’t checked in for a while ⏰</p>
+      <ion-item lines="none">
+        <ion-label>Enable Reminders</ion-label>
+        <ion-toggle color="primary" checked></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Reminder Frequency</ion-label>
+        <ion-select placeholder="Select Frequency">
+          <ion-select-option value="daily">Daily</ion-select-option>
+          <ion-select-option value="3days">Every 3 Days</ion-select-option>
+          <ion-select-option value="weekly">Weekly</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Motivation Card -->
+  <ion-card class="motivation-card ion-text-center">
+    <ion-card-content>
+      <ion-icon name="happy-outline" class="big-icon"></ion-icon>
+      <h3 class="ion-margin-top">"Consistency is the key 🔑 to progress!"</h3>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!-- Custom CSS -->
+<style>
+  .last-login-card {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 16px;
+  }
+
+  .last-login-card ion-icon {
+    font-size: 30px;
+    margin-bottom: 6px;
+    color: #ffd54f;
+  }
+
+  .last-login-card p {
+    margin: 8px 0;
+    font-size: 15px;
+    color: #f1f1f1;
+  }
+
+  .checkin-btn {
+    margin-top: 12px;
+    font-weight: bold;
+    --box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  .reminder-card {
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin: 16px;
+  }
+
+  .reminder-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #444;
+  }
+
+  ion-item {
+    --padding-start: 8px;
+    --inner-padding-end: 8px;
+    font-size: 14px;
+  }
+
+  .motivation-card {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+    padding: 18px;
+    border-radius: 16px;
+    margin: 20px;
+  }
+
+  .big-icon {
+    font-size: 40px;
+    color: white;
+  }
+</style>

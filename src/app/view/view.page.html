@@ -1,0 +1,218 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      Membership
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="ion-padding">
+
+  <!-- Hero Banner -->
+  <div class="hero-banner">
+    <img src="assets/img/memb.png" alt="Membership Banner">
+    <div class="overlay-text">
+      <h1>Unlock Premium Experience</h1>
+      <p>Get the best out of FitQuest with our membership plans</p>
+    </div>
+  </div>
+
+  <!-- Benefits Section -->
+  <h2 class="section-title">Why Go Premium?</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="benefit-card">
+          <ion-card-header>
+            <ion-icon name="barbell-outline" class="benefit-icon"></ion-icon>
+            <ion-card-title>Personalized Plans</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Get customized workout and diet plans tailored to your goals.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card class="benefit-card">
+          <ion-card-header>
+            <ion-icon name="videocam-outline" class="benefit-icon"></ion-icon>
+            <ion-card-title>Live Sessions</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Join live classes with expert trainers and fitness coaches.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="benefit-card">
+          <ion-card-header>
+            <ion-icon name="stats-chart-outline" class="benefit-icon"></ion-icon>
+            <ion-card-title>Progress Tracking</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Advanced analytics to monitor your performance and growth.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card class="benefit-card">
+          <ion-card-header>
+            <ion-icon name="nutrition-outline" class="benefit-icon"></ion-icon>
+            <ion-card-title>Nutrition Guides</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Get premium meal plans and guidance from certified dieticians.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Pricing Section -->
+  <h2 class="section-title">Choose Your Plan</h2>
+
+  <ion-card class="pricing-card">
+    <ion-card-header>
+      <ion-card-subtitle>Monthly</ion-card-subtitle>
+      <ion-card-title>₹99 / month</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Perfect for short-term goals and trying out the premium features.
+    </ion-card-content>
+    <ion-button expand="block" color="primary">Subscribe</ion-button>
+  </ion-card>
+
+  <ion-card class="pricing-card popular-plan">
+    <ion-badge color="warning" class="popular-badge">Most Popular</ion-badge>
+    <ion-card-header>
+      <ion-card-subtitle>Annual</ion-card-subtitle>
+      <ion-card-title>₹799 / year</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Save more with the annual plan and enjoy uninterrupted access.
+    </ion-card-content>
+    <ion-button expand="block" color="success">Subscribe</ion-button>
+  </ion-card>
+
+  <ion-card class="pricing-card">
+    <ion-card-header>
+      <ion-card-subtitle>Lifetime</ion-card-subtitle>
+      <ion-card-title>₹9999 / one-time</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Pay once and enjoy all premium benefits for a lifetime.
+    </ion-card-content>
+    <ion-button expand="block" color="tertiary">Subscribe</ion-button>
+  </ion-card>
+
+</ion-content>
+
+<!-- Inline CSS -->
+<!-- Inline CSS -->
+<style>
+  ion-content {
+    --background: #f9f9f9;
+  }
+
+  .hero-banner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Dark gradient at the bottom of the banner to make text pop */
+  .hero-banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    pointer-events: none;
+  }
+
+  .overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    z-index: 1;
+    max-width: 80%;
+  }
+
+  .overlay-text h1 {
+    font-size: 1.8rem;        /* bigger */
+    font-weight: 800;         /* bolder */
+    margin: 0 0 5px 0;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8); /* highlight with shadow */
+  }
+
+  .overlay-text p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); /* highlight with shadow */
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    color: #333;
+    text-align: center;
+  }
+
+  .benefit-card {
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  .benefit-icon {
+    font-size: 2rem;
+    color: var(--ion-color-primary);
+    margin-bottom: 5px;
+  }
+
+  .pricing-card {
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .popular-plan {
+    border: 2px solid var(--ion-color-warning);
+    position: relative;
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    z-index: 2;
+  }
+
+  ion-button {
+    margin-top: 10px;
+  }
+</style>

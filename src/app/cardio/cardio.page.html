@@ -1,0 +1,182 @@
+<ion-header>
+  <ion-toolbar color="light">
+
+    <!-- Left Menu Button -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+
+    <!-- Center Title -->
+    <ion-title class="ion-text-center">Cardio Workouts</ion-title>
+
+    <!-- Right Notification -->
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="cardio-page">
+
+  <!-- Hero Banner -->
+  <div class="hero-banner">
+    <h2>Boost Your Heart Health ❤️</h2>
+    <p>Discover the best cardio workouts for stamina, fat burn & endurance.</p>
+  </div>
+
+  <!-- Types of Cardio -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label><strong>Types of Cardio</strong></ion-label>
+    </ion-list-header>
+
+    <ion-card class="cardio-card">
+      <ion-card-header>
+        <ion-card-title>Treadmill Running</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="walk-outline" class="cardio-icon"></ion-icon>
+        <p>Perfect for burning calories and improving heart strength. Start with intervals of jogging & running.</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="cardio-card">
+      <ion-card-header>
+        <ion-card-title>Cycling</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="bicycle-outline" class="cardio-icon"></ion-icon>
+        <p>Great for legs endurance and fat loss. Alternate between steady cycling and HIIT sessions.</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="cardio-card">
+      <ion-card-header>
+        <ion-card-title>Rowing Machine</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="barbell-outline" class="cardio-icon"></ion-icon>
+        <p>Full-body cardio that engages arms, core, and legs while enhancing stamina.</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="cardio-card">
+      <ion-card-header>
+        <ion-card-title>Elliptical</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="infinite-outline" class="cardio-icon"></ion-icon>
+        <p>Low-impact cardio that's easy on joints but still effective for calorie burn.</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="cardio-card">
+      <ion-card-header>
+        <ion-card-title>Stair Climber</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="stats-chart-outline" class="cardio-icon"></ion-icon>
+        <p>Builds leg strength and endurance while giving an intense cardio workout.</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <!-- Interactive Expandable Info -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label><strong>Learn More</strong></ion-label>
+    </ion-list-header>
+
+    <ion-accordion-group expand="inset">
+      <ion-accordion value="benefits">
+        <ion-item slot="header" color="light">
+          <ion-label>Benefits of Cardio</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          ✅ Burns fat <br>
+          ✅ Strengthens your heart & lungs <br>
+          ✅ Improves stamina & recovery <br>
+          ✅ Reduces stress and boosts mood
+        </div>
+      </ion-accordion>
+
+      <ion-accordion value="tips">
+        <ion-item slot="header" color="light">
+          <ion-label>Pro Tips</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          🔹 Warm-up 5–10 min before cardio <br>
+          🔹 Mix HIIT and steady state cardio <br>
+          🔹 Stay hydrated during sessions <br>
+          🔹 Don’t overtrain – allow recovery days
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-list>
+
+  <!-- Motivation Card -->
+  <ion-card class="motivation-card ion-text-center">
+    <ion-card-content>
+      <ion-icon name="fitness-outline" class="big-icon"></ion-icon>
+      <h3 class="ion-margin-top">"Your heart is the strongest muscle – train it well 💪"</h3>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!-- Custom CSS -->
+<style>
+  .hero-banner {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    text-align: center;
+    padding: 30px 16px;
+    border-radius: 20px;
+    margin: 12px;
+  }
+
+  .hero-banner h2 {
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .cardio-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    margin-bottom: 12px;
+  }
+
+  .cardio-card ion-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .cardio-card p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 6px;
+  }
+
+  .cardio-icon {
+    font-size: 28px;
+    color: #3880ff;
+    margin-right: 8px;
+  }
+
+  .motivation-card {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: white;
+    padding: 18px;
+    border-radius: 16px;
+    margin: 16px;
+  }
+
+  .big-icon {
+    font-size: 40px;
+    color: white;
+  }
+</style>

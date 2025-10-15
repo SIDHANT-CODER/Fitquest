@@ -1,17 +1,657 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+<!-- ===== Side Menu ===== -->
+<ion-menu contentId="main-content" side="start" menuId="main-menu">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/tabs/tab1">Home</ion-item>
+      <ion-item routerLink="/tabs/tab2">Activity</ion-item>
+      <ion-item routerLink="/tabs/profile">Profile</ion-item>
+      <ion-item routerLink="/tabs/setting">Settings</ion-item>
+      <ion-item routerLink="/tabs/userprofile">Userprofile</ion-item>
+      <ion-item routerLink="/tabs/notification">Notifications</ion-item>
+      <ion-item routerLink="/change-password">Change Password</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- ===== Main Content Wrapper ===== -->
+<div id="main-content">
+
+  <!-- ===== Header ===== -->
+  <ion-header>
+    <ion-toolbar color="light">
+
+      <!-- Left: Menu Button -->
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu">
+          <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+        </ion-menu-button>
+      </ion-buttons>
+
+      <!-- Centered greeting/title -->
+      <ion-title class="greeting ion-text-center">Good Morning!</ion-title>
+
+      <!-- Right: settings + notifications -->
+      <ion-buttons slot="end">
+        <ion-button routerLink="/tabs/setting">
+          <ion-icon name="settings-outline"></ion-icon>
+        </ion-button>
+
+        <ion-button routerLink="/tabs/notification">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- ===== Page Content ===== -->
+  <ion-content fullscreen class="home-activity-page">
+
+    <!-- ===== Your Workouts ===== -->
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label class="section-title">Your Workouts</ion-label>
+      </ion-list-header>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-card class="workout-card">
+              <img src="assets/img/workout1.png" alt="Workout 1" />
+              <ion-card-content>
+                <p>45 min • Intermediate</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+          <ion-col size="6">
+            <ion-card class="workout-card">
+              <img src="assets/img/workout2.png" alt="Workout 2" />
+              <ion-card-content>
+                <p>30 min • Advanced</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <!-- ===== Today’s Activity ===== -->
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label class="section-title">Today’s Activity</ion-label>
+      </ion-list-header>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <ion-card class="activity-card" routerLink="/tabs/step">
+              <ion-icon name="walk-outline" color="success"></ion-icon>
+              <h2>6,259</h2>
+              <p>Steps</p>
+            </ion-card>
+          </ion-col>
+
+          <ion-col size="4">
+            <ion-card class="activity-card" routerLink="/tabs/calories">
+              <ion-icon name="flame-outline" color="danger"></ion-icon>
+              <h2>350</h2>
+              <p>Calories</p>
+            </ion-card>
+          </ion-col>
+
+          <ion-col size="4">
+            <ion-card class="activity-card">
+              <ion-icon name="timer-outline" color="primary"></ion-icon>
+              <h2>82</h2>
+              <p>Active Minutes</p>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <!-- ===== Recommendations ===== -->
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label class="section-title">Recommendations</ion-label>
+      </ion-list-header>
+
+      <ion-card class="recommend-card">
+        <ion-card-content class="recommend-content">
+          <div>
+            <ion-badge color="success">New</ion-badge>
+            <h3>Morning Run</h3>
+            <p>Start your day with a refreshing run</p>
+          </div>
+          <img src="assets/img/run.png" alt="Morning Run" />
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <!-- ===== Featured Workouts ===== -->
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label class="section-title">Featured Workouts</ion-label>
+      </ion-list-header>
+
+      <ion-card class="featured-card">
+        <ion-card-content class="featured-content">
+          <div>
+            <h3>Strength Training</h3>
+            <p>Build muscle and improve your strength</p>
+          </div>
+          <img src="assets/img/strength.png" alt="Strength Training" />
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="featured-card">
+        <ion-card-content class="featured-content">
+          <div>
+            <h3>Yoga Flow</h3>
+            <p>Enhance flexibility and calm your mind</p>
+          </div>
+          <img src="assets/img/yoga.png" alt="Yoga" />
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <!-- ===== Statistics ===== -->
+    <ion-card class="stats-card">
+      <ion-card-header>
+        <ion-card-title>Statistics</ion-card-title>
+        <ion-note slot="end" color="light">Last 7 days</ion-note>
+      </ion-card-header>
+      <ion-card-content>
+        <img
+          src="https://github.com/SIDHANT-CODER/important_assets/blob/4a2ba4a93b72d6c2d656976311b93e83a4613bf4/activity_graph.png?raw=true"
+          alt="Activity Graph" />
+      </ion-card-content>
+    </ion-card>
+
+    <!-- ===== Daily Workout Highlight ===== -->
+    <ion-card class="highlight-card">
+      <ion-card-content>
+        <ion-icon name="flash-outline"></ion-icon>
+        <div class="highlight-text">
+          <h2>🔥 Today’s Challenge</h2>
+          <p>Complete <strong>50 push-ups</strong> & <strong>20 burpees</strong> before 8 PM!</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- ===== Stats Summary ===== -->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card class="summary-card" routerLink="/tabs/calories">
+            <ion-card-content>
+              <ion-icon name="flame-outline"></ion-icon>
+              <h2>223</h2>
+              <p>Calories</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-card class="summary-card"  routerLink="/tabs/exercise">
+            <ion-card-content>
+              <ion-icon name="walk-outline"></ion-icon>
+              <h2>36</h2>
+              <p>Exercises</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- ===== Daily Goal Tracker ===== -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Daily Goal</ion-card-title>
+      </ion-card-header>
+      <ion-card-content class="ion-text-center">
+        <ion-progress-bar value="0.65" color="success"></ion-progress-bar>
+        <p class="ion-margin-top">You’ve achieved <strong>65%</strong> of today’s target!</p>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- ===== Continue Section ===== -->
+    <ion-list>
+      <ion-list-header>
+        <ion-label><strong>Continue</strong></ion-label>
+      </ion-list-header>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-card class="continue-card chest-card" routerLink="/tabs/chest">
+              <ion-card-content>
+                <ion-progress-bar value="0.4"></ion-progress-bar>
+                <h3 >Chest Workout</h3>
+                <p>5/12</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+          <ion-col size="6">
+            <ion-card class="continue-card legs-card" routerLink="/tabs/legs">
+              <ion-card-content>
+                <ion-progress-bar value="0.15"></ion-progress-bar>
+                <h3>Legs Workout</h3>
+                <p>3/20</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <!-- ===== Upcoming Sessions ===== -->
+    <ion-list>
+      <ion-list-header>
+        <ion-label><strong>Upcoming Sessions</strong></ion-label>
+      </ion-list-header>
+
+      <ion-item routerLink="/tabs/back">
+        <ion-icon name="barbell-outline" slot="start" color="primary"></ion-icon>
+        <ion-label>
+          <h3>Back & Biceps</h3>
+          <p >Tomorrow, 7:00 AM</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item routerLink="/tabs/cardio">
+        <ion-icon name="bicycle-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          <h3 >Cardio Ride</h3>
+          <p >Wed, 6:30 AM</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <!-- ===== Motivation Card ===== -->
+    <ion-card class="motivation-card ion-text-center">
+      <ion-card-content>
+        <ion-icon name="fitness-outline" class="big-icon"></ion-icon>
+        <h3 class="ion-margin-top">
+          "Push yourself, because no one else will do it for you."
+        </h3>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-content>
+</div>
+<style>
+  /* ===== General Page Styling ===== */
+  ion-content::part(scroll) {
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+
+
+  ion-content {
+    --background: #f7f7f7;
+    --padding-bottom: 0;   /* remove default Ionic bottom padding */
+  }
+  
+  .greeting {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .section-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  ion-avatar img {
+    width: 36px;
+    height: 36px;
+  }
+  
+  /* ===== Workout Cards ===== */
+  .workout-card {
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  
+  .workout-card img {
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+  
+  .workout-card p {
+    font-size: 14px;
+    margin: 6px 0 0;
+    color: #555;
+  }
+  
+  /* ===== Activity Cards ===== */
+  .activity-card {
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .activity-card ion-icon {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+  
+  .activity-card h2 {
+    margin: 4px 0 0;
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .activity-card p {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+  }
+  
+  /* ===== Recommendation Cards ===== */
+  .recommend-card {
+    border-radius: 16px;
+    background: #fff;
+    padding: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .recommend-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .recommend-content div h3 {
+    margin: 4px 0 2px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .recommend-content div p {
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+  }
+  
+  .recommend-content img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  /* ===== Featured Workouts ===== */
+  .featured-card {
+    border-radius: 16px;
+    background: #fff;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .featured-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .featured-content div h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .featured-content div p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #666;
+  }
+  
+  .featured-content img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  /* ===== Stats Cards ===== */
+  ion-card {
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .stats-card {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border-radius: 20px;
+    padding: 12px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .stats-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    opacity: 0.2;
+  }
+  
+  .stats-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .stats-card ion-card-title {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .stats-card ion-note {
+    color: #ffe082;
+    font-weight: 600;
+  }
+  
+  .stats-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+  }
+  
+  /* ===== Highlight Cards ===== */
+  .highlight-card {
+    margin: 16px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #fff;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .highlight-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .highlight-card ion-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #fff176;
+  }
+  
+  .highlight-card h2 {
+    margin: 4px 0;
+    font-weight: 700;
+  }
+  
+  .highlight-card p {
+    font-size: 14px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* ===== Summary Cards ===== */
+  .summary-card {
+    text-align: center;
+    padding: 16px;
+    border-radius: 16px;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .summary-card:first-of-type {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+  }
+  
+  .summary-card:last-of-type {
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+  }
+  
+  .summary-card ion-icon {
+    font-size: 32px;
+    margin-bottom: 6px;
+    color: white;
+  }
+  
+  .summary-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ===== Continue Section ===== */
+  .continue-card {
+    text-align: center;
+    padding: 16px;
+    border-radius: 16px;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .continue-card ion-progress-bar {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    height: 8px;
+    --progress-background: rgba(255, 255, 255, 0.3);
+    --progress-color: white;
+  }
+  
+  .continue-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .chest-card {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+  }
+  
+  .legs-card {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+  }
+  
+  ion-list-header {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 10px;
+  }
+  
+  ion-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  ion-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 2px 0;
+  }
+  
+  /* ===== Motivation Card ===== */
+  .motivation-card {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    color: white;
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 50px; /* Removed extra white space at the bottom */
+  }
+  
+  .motivation-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  
+  .big-icon {
+    font-size: 40px;
+    color: white;
+  }
+  
+  /* ===== Attractive Menu Styling ===== */
+  ion-menu {
+    --background: #ffffff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  ion-menu ion-header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+  }
+  
+  ion-menu ion-toolbar {
+    --background: transparent;
+    color: #fff;
+    text-align: center;
+  }
+  
+  ion-menu ion-title {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+  }
+  
+  ion-menu ion-content {
+    --background: #f9f9f9;
+    padding-top: 12px;
+  }
+  
+  ion-menu ion-item {
+    --background: #fff;
+    --border-radius: 12px;
+    margin: 8px 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 500;
+  }
+  
+  ion-menu ion-item::part(native) {
+    padding-left: 16px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  ion-menu ion-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(135deg, #e3f2fd, #f1f8ff);
+  }
+  
+  ion-menu ion-item.ion-activated {
+    background: linear-gradient(135deg, #6a11cb20, #2575fc20);
+  }
+  
+  ion-menu ion-list {
+    padding-bottom: 12px;
+  }
+  </style>
+  

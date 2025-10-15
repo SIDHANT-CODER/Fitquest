@@ -1,17 +1,31 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>Chats</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/tabs/newchat">
+        <ion-icon name="create-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content color="light">
+  <ion-list>
+    <!-- Loop through all chats -->
+    <ion-item
+      *ngFor="let chat of chats; let i = index"
+      [routerLink]="i === 0 ? '/tabs/chat' : null" 
+      [button]="i === 0"                
+      detail="false"                    
+    >
+      <ion-avatar slot="start">
+        <img [src]="chat.avatar" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ chat.name }}</h2>
+        <p>{{ chat.message }}</p>
+      </ion-label>
+      <div class="time">{{ chat.time }}</div>
+    </ion-item>
+  </ion-list>
 </ion-content>

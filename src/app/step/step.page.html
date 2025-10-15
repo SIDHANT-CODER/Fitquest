@@ -1,0 +1,344 @@
+<ion-header>
+  <ion-toolbar color="light">
+    
+    <!-- Back Button -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/dashboard" text="" icon="arrow-back-outline"></ion-back-button>
+    </ion-buttons>
+
+    <!-- Page Title -->
+    <ion-title class="ion-text-center">Step Insights</ion-title>
+
+    <!-- Menu or Refresh -->
+    <ion-buttons slot="end">
+      <ion-button fill="clear">
+        <ion-icon name="refresh-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Top Step Summary -->
+  <div class="top-summary">
+    <div class="circle-progress">
+      <div class="circle-inner">
+        <ion-icon name="footsteps-outline" class="main-icon"></ion-icon>
+        <p class="steps-count">6,259</p>
+        <p class="steps-label">Today's Steps</p>
+      </div>
+    </div>
+    <p class="goal-text">Goal: 10,000 steps</p>
+  </div>
+
+  <!-- Time of Day Insights -->
+  <div class="card">
+    <h2>Peak Walking Time</h2>
+    <p class="card-sub">You walked the most during:</p>
+    <div class="peak-time">
+      <ion-icon name="time-outline" class="peak-icon"></ion-icon>
+      <p class="peak-text">7:00 AM - 8:00 AM</p>
+      <span class="peak-steps">3,200 steps</span>
+    </div>
+
+    <div class="bar-chart">
+      <div class="bar" style="height:80%" title="7AM"></div>
+      <div class="bar" style="height:55%" title="8AM"></div>
+      <div class="bar" style="height:40%" title="9AM"></div>
+      <div class="bar" style="height:60%" title="10AM"></div>
+      <div class="bar" style="height:30%" title="11AM"></div>
+      <div class="bar" style="height:50%" title="5PM"></div>
+      <div class="bar" style="height:20%" title="8PM"></div>
+    </div>
+    <p class="bar-label">Steps taken at different times of the day</p>
+  </div>
+
+  <!-- Weekly Insights -->
+  <div class="card">
+    <h2>Weekly Progress</h2>
+    <p class="card-sub">Day you walked the most:</p>
+    <div class="best-day">
+      <ion-icon name="calendar-outline" class="peak-icon"></ion-icon>
+      <p class="best-day-text">Wednesday</p>
+      <span class="best-day-steps">12,345 steps</span>
+    </div>
+
+    <div class="week-chart">
+      <div class="day">
+        <div class="week-bar" style="height:60%"></div>
+        <p>Mon</p>
+      </div>
+      <div class="day">
+        <div class="week-bar" style="height:85%"></div>
+        <p>Tue</p>
+      </div>
+      <div class="day highlight">
+        <div class="week-bar" style="height:100%"></div>
+        <p>Wed</p>
+      </div>
+      <div class="day">
+        <div class="week-bar" style="height:70%"></div>
+        <p>Thu</p>
+      </div>
+      <div class="day">
+        <div class="week-bar" style="height:55%"></div>
+        <p>Fri</p>
+      </div>
+      <div class="day">
+        <div class="week-bar" style="height:65%"></div>
+        <p>Sat</p>
+      </div>
+      <div class="day">
+        <div class="week-bar" style="height:40%"></div>
+        <p>Sun</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Stats -->
+  <div class="card">
+    <h2>Additional Insights</h2>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <ion-icon name="speedometer-outline" class="stat-icon"></ion-icon>
+        <p class="stat-value">5.2 km</p>
+        <p class="stat-label">Distance</p>
+      </div>
+
+      <div class="stat-box">
+        <ion-icon name="flame-outline" class="stat-icon"></ion-icon>
+        <p class="stat-value">320 kcal</p>
+        <p class="stat-label">Calories Burned</p>
+      </div>
+
+      <div class="stat-box">
+        <ion-icon name="timer-outline" class="stat-icon"></ion-icon>
+        <p class="stat-value">82 min</p>
+        <p class="stat-label">Active Time</p>
+      </div>
+
+      <div class="stat-box">
+        <ion-icon name="pulse-outline" class="stat-icon"></ion-icon>
+        <p class="stat-value">5.8 km/h</p>
+        <p class="stat-label">Avg. Pace</p>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+
+<!-- Inline CSS -->
+<style>
+  ion-content {
+    --background: #f5f7fa;
+  }
+
+  ion-toolbar {
+    --background: #ffffff;
+    --color: #333;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+
+  ion-title {
+    font-weight: bold;
+  }
+
+  /* Top Summary */
+  .top-summary {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .circle-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(#3880ff 84%, #e0e0e0 0%);
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .circle-inner {
+    background: #fff;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main-icon {
+    font-size: 24px;
+    color: #3880ff;
+    margin-bottom: 5px;
+  }
+
+  .steps-count {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+
+  .steps-label {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+  }
+
+  .goal-text {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+
+  /* Card Style */
+  .card {
+    background: #fff;
+    margin: 15px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  .card h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  .card-sub {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 12px;
+  }
+
+  /* Peak Walking Time */
+  .peak-time, .best-day {
+    display: flex;
+    align-items: center;
+    background: #f5f7fa;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .peak-icon {
+    font-size: 22px;
+    color: #3880ff;
+    margin-right: 10px;
+  }
+
+  .peak-text, .best-day-text {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+  }
+
+  .peak-steps, .best-day-steps {
+    font-weight: bold;
+    color: #3880ff;
+  }
+
+  /* Time of Day Bar Chart */
+  .bar-chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 120px;
+    margin-top: 15px;
+    background: #f9fafb;
+    padding: 10px 5px;
+    border-radius: 8px;
+  }
+
+  .bar {
+    width: 10px;
+    background: #3880ff;
+    border-radius: 4px;
+  }
+
+  .bar-label {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 8px;
+    color: #777;
+  }
+
+  /* Weekly Chart */
+  .week-chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 150px;
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .day {
+    text-align: center;
+    flex: 1;
+  }
+
+  .week-bar {
+    width: 14px;
+    background: #3880ff;
+    margin: 0 auto 5px auto;
+    border-radius: 4px;
+  }
+
+  .day p {
+    font-size: 12px;
+    margin: 0;
+    color: #555;
+  }
+
+  .day.highlight .week-bar {
+    background: #ff9800;
+  }
+
+  /* Additional Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .stat-box {
+    background: #f5f7fa;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  .stat-icon {
+    font-size: 24px;
+    color: #3880ff;
+    margin-bottom: 5px;
+  }
+
+  .stat-value {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+
+  .stat-label {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+  }
+</style>

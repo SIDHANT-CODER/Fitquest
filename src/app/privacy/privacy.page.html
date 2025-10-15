@@ -1,0 +1,163 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/setting"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Privacy & Security</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding privacy-page">
+
+  <!-- Hero / Banner Section -->
+  <div class="hero">
+    <ion-icon name="shield-checkmark-outline" class="hero-icon"></ion-icon>
+    <h1 class="hero-title">Your Privacy Matters</h1>
+    <p class="hero-subtitle">
+      We are committed to keeping your personal data safe and secure.
+    </p>
+  </div>
+
+  <!-- Overview Card -->
+  <ion-card class="info-card">
+    <ion-card-header>
+      <ion-card-title>Our Commitment</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        This app respects your privacy and is designed with your security in mind.
+        We only collect the minimal amount of personal data required to provide
+        the best experience and we never share it with third parties without your consent.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Data Collection Card -->
+  <ion-card class="info-card">
+    <ion-card-header>
+      <ion-card-title>Data We Collect</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul class="custom-list">
+        <li><strong>Account Details:</strong> Name, email, and phone for login and support.</li>
+        <li><strong>Usage Data:</strong> Information about app features you use to improve the app experience.</li>
+        <li><strong>Health/Fitness Data:</strong> Only if you grant permissions (used locally for tracking goals).</li>
+        <li><strong>Device Info:</strong> Basic device and app version data to optimize performance.</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Security Measures -->
+  <ion-card class="info-card">
+    <ion-card-header>
+      <ion-card-title>How We Keep You Secure</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul class="custom-list">
+        <li>🔒 End-to-end encryption for sensitive data like chats and login credentials.</li>
+        <li>🛡️ Secure cloud storage and encrypted API communication.</li>
+        <li>🔑 Two-factor authentication (2FA) option for better account security.</li>
+        <li>🚫 We do not sell your data to advertisers or third parties.</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- User Control -->
+  <ion-card class="info-card">
+    <ion-card-header>
+      <ion-card-title>Your Rights</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        You have full control over your personal information. You can update your data,
+        request data deletion, or withdraw permissions at any time from your account settings.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Contact Section -->
+  <ion-card class="contact-card">
+    <ion-card-header>
+      <ion-card-title>Need Help or Have Questions?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>If you have any privacy-related concerns, reach out to us:</p>
+      <ion-button fill="solid" color="primary" href="mailto:support@example.com">
+        Contact Support
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!-- Inline CSS -->
+<style>
+  .privacy-page {
+    --background: linear-gradient(to bottom, #f3f7fb, #ffffff);
+  }
+
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .hero-icon {
+    font-size: 4rem;
+    color: var(--ion-color-primary);
+    margin-bottom: 10px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--ion-color-primary);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+    padding: 0 10px;
+  }
+
+  /* Cards */
+  .info-card,
+  .contact-card {
+    margin-bottom: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  ion-card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--ion-color-primary);
+  }
+
+  ion-card-content p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  /* Custom List */
+  .custom-list {
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #444;
+    font-size: 0.95rem;
+  }
+
+  .custom-list li {
+    margin-bottom: 8px;
+  }
+
+  /* Contact Card */
+  .contact-card ion-button {
+    margin-top: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+</style>

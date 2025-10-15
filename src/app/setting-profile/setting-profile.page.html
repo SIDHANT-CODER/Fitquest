@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar color="light">
+
+    <!-- Back Button -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/profile"></ion-back-button>
+    </ion-buttons>
+
+    <!-- Title -->
+    <ion-title class="ion-text-center" style="display: flex;">Profile</ion-title>
+
+
+
+  </ion-toolbar>
+</ion-header>
+<ion-content color="light">
+
+  <!-- Profile Picture Section -->
+  <div class="profile-header">
+    <ion-avatar class="profile-avatar">
+      <img src="assets/img/avtar.png" alt="User Avatar">
+    </ion-avatar>
+    <ion-button fill="outline" size="small" class="edit-btn">
+      <ion-icon name="camera-outline" slot="start"></ion-icon>
+      Change Photo
+    </ion-button>
+  </div>
+
+  <ion-list lines="full" inset="true" class="settings-list">
+
+    <!-- Name -->
+    <ion-item>
+      <ion-icon name="person-circle-outline" slot="start" color="primary"></ion-icon>
+      <ion-label position="stacked">Full Name</ion-label>
+      <ion-input [(ngModel)]="profile.name" placeholder="Enter your name"></ion-input>
+    </ion-item>
+
+
+    <!-- Phone Number -->
+    <ion-item>
+      <ion-icon name="call-outline" slot="start" color="primary"></ion-icon>
+      <ion-label position="stacked">Phone Number</ion-label>
+      <ion-input [(ngModel)]="profile.phone" type="tel" placeholder="Enter phone number">
+      </ion-input>
+    </ion-item>
+
+    <!-- Height -->
+    <ion-item>
+      <ion-icon name="body-outline" slot="start" color="primary"></ion-icon>
+      <ion-label position="stacked">Height (cm)</ion-label>
+      <ion-input [(ngModel)]="profile.height" type="number" placeholder="Enter height in cm">
+      </ion-input>
+    </ion-item>
+
+    <!-- Weight -->
+    <ion-item>
+      <ion-icon name="barbell-outline" slot="start" color="primary"></ion-icon>
+      <ion-label position="stacked">Weight (kg)</ion-label>
+      <ion-input [(ngModel)]="profile.weight" type="number" placeholder="Enter weight in kg">
+      </ion-input>
+    </ion-item>
+
+    <!-- Location -->
+    <ion-item>
+      <ion-icon name="location-outline" slot="start" color="primary"></ion-icon>
+      <ion-label position="stacked">Location</ion-label>
+      <ion-input [(ngModel)]="profile.location" placeholder="Enter your city or area">
+      </ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <!-- Save Button -->
+  <div class="save-container">
+    <ion-button expand="block" color="primary" (click)="saveProfile()">
+      <ion-icon name="save-outline" slot="start"></ion-icon>
+      Save Changes
+    </ion-button>
+  </div>
+
+</ion-content>
+
+<!-- Inline CSS -->
+<style>
+  ion-content {
+    --background: #f5f7fa;
+  }
+
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    border: 4px solid #3880ff;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .edit-btn {
+    --border-radius: 20px;
+    font-size: 14px;
+  }
+
+  .settings-list {
+    background: #fff;
+    border-radius: 12px;
+    margin: 0 15px;
+    padding: 5px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  ion-item {
+    --padding-start: 15px;
+    --background: transparent;
+  }
+
+  ion-label {
+    font-weight: 500;
+    color: #555;
+  }
+
+  .save-container {
+    margin: 30px 20px;
+  }
+
+  ion-button {
+    --border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 6px 16px rgba(56, 128, 255, 0.3);
+  }
+</style>

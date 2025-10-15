@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <!-- Back Button -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+
+    <!-- Page Title -->
+    <ion-title>Add New Chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding newchat-content">
+
+  <!-- Card for Form -->
+  <ion-card class="form-card">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Add a New Person</ion-card-title>
+      <ion-card-subtitle class="ion-text-center">
+        Fill in the details to start chatting
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form (ngSubmit)="addNewChat()">
+        
+        <!-- Profile Picture Upload -->
+        <div class="profile-upload ion-text-center">
+          <ion-avatar class="avatar-preview">
+            <img [src]="previewImage || 'assets/img/avtar.png'" alt="Avatar" />
+          </ion-avatar>
+          <ion-button expand="block" size="small" fill="outline" (click)="uploadImage()">
+            Upload Photo
+          </ion-button>
+        </div>
+
+        <!-- Full Name -->
+        <ion-item>
+          <ion-label position="floating">Full Name</ion-label>
+          <ion-input type="text" [(ngModel)]="newChat.name" name="name" required></ion-input>
+        </ion-item>
+
+        <!-- Age -->
+        <ion-item>
+          <ion-label position="floating">Age</ion-label>
+          <ion-input type="number" [(ngModel)]="newChat.age" name="age" min="1" required></ion-input>
+        </ion-item>
+
+        <!-- Phone Number -->
+        <ion-item>
+          <ion-label position="floating">Phone Number</ion-label>
+          <ion-input type="tel" [(ngModel)]="newChat.phone" name="phone" required></ion-input>
+        </ion-item>
+
+        <!-- Email -->
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" [(ngModel)]="newChat.email" name="email"></ion-input>
+        </ion-item>
+
+        <!-- Short Bio -->
+        <ion-item>
+          <ion-label position="floating">Short Bio</ion-label>
+          <ion-textarea [(ngModel)]="newChat.bio" name="bio" auto-grow="true"></ion-textarea>
+        </ion-item>
+
+        <!-- Submit Button -->
+        <ion-button expand="block" class="submit-btn" type="submit">
+          Add Chat
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!-- Inline CSS -->
+<style>
+  .newchat-content {
+    --background: #f8f9fa;
+  }
+
+  .form-card {
+    margin-top: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .avatar-preview {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 12px auto;
+    border: 3px solid var(--ion-color-primary);
+  }
+
+  ion-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--ion-color-primary);
+  }
+
+  ion-card-subtitle {
+    color: var(--ion-color-medium);
+    margin-bottom: 10px;
+  }
+
+  .submit-btn {
+    margin-top: 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  }
+
+  ion-item {
+    --highlight-color-focused: var(--ion-color-primary);
+    margin-bottom: 12px;
+  }
+
+  .profile-upload ion-button {
+    --border-radius: 20px;
+    margin-top: 10px;
+  }
+</style>

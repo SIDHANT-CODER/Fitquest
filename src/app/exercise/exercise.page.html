@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Exercises</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-list>
+    <ion-card *ngFor="let ex of exercises">
+      <img [src]="ex.image" alt="{{ex.name}}" />
+      <ion-card-header>
+        <ion-card-title>{{ ex.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ ex.description }}</p>
+        <ion-note color="medium"><strong>Tip:</strong> {{ ex.tips }}</ion-note>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

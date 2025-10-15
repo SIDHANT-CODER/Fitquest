@@ -1,0 +1,114 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Notifications</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="notification-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Notifications</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="summary-card">
+    <ion-card-header>
+      <ion-card-title>Today's Updates</ion-card-title>
+      <ion-card-subtitle>Stay informed with the latest alerts</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      You have <strong>5 new notifications</strong> today.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item button detail="true">
+      <ion-avatar slot="start">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile">
+      </ion-avatar>
+      <ion-label>
+        <h2>New Message</h2>
+        <p>You received a new message from Alex.</p>
+      </ion-label>
+      <ion-note slot="end" color="medium">2m ago</ion-note>
+    </ion-item>
+
+    <ion-item button detail="true">
+      <ion-avatar slot="start">
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Alert">
+      </ion-avatar>
+      <ion-label>
+        <h2>System Update</h2>
+        <p>Your app was updated successfully.</p>
+      </ion-label>
+      <ion-note slot="end" color="medium">10m ago</ion-note>
+    </ion-item>
+
+    <ion-item button detail="true">
+      <ion-avatar slot="start">
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Event">
+      </ion-avatar>
+      <ion-label>
+        <h2>Event Reminder</h2>
+        <p>Yoga class starts at 6:00 PM.</p>
+      </ion-label>
+      <ion-note slot="end" color="medium">1h ago</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <div class="clear-btn">
+    <ion-button expand="block" color="danger" fill="outline">
+      Clear All Notifications
+    </ion-button>
+  </div>
+</ion-content>
+
+<style>
+.notification-content {
+  --background: #f7f9fc;
+  padding: 10px;
+}
+
+.summary-card {
+  margin: 16px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, #5b86e5, #36d1dc);
+  color: white;
+}
+
+.summary-card ion-card-title,
+.summary-card ion-card-subtitle {
+  color: #fff;
+}
+
+ion-item {
+  margin: 8px 0;
+  border-radius: 12px;
+  --background: #ffffff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+ion-item h2 {
+  font-weight: bold;
+  color: #222;
+}
+
+ion-item p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+ion-avatar img {
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.clear-btn {
+  margin: 20px 16px;
+}
+</style>

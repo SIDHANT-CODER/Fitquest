@@ -1,17 +1,321 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="light">
+
+    <!-- Title with Image -->
     <ion-title>
-      Tab 2
+      <img src="https://github.com/SIDHANT-CODER/important_assets/blob/main/Screenshot%202025-09-10%20135018.png?raw=true"
+           style="height:28px; vertical-align:middle; margin-right:8px;">
+      FITQUEST
     </ion-title>
+
+    <!-- Right side grid button -->
+    <ion-buttons slot="end">
+      <ion-button routerLink="/tabs/dashboard">
+        <ion-icon name="grid-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content color="light" class="ion-padding">
+
+  <!-- Legend for dot colors -->
+  <div class="legend">
+    <div><span class="dot blue"></span> Long</div>
+    <div><span class="dot green"></span> Lean</div>
+    <div><span class="dot yellow"></span> Medium</div>
+  </div>
+
+  <!-- Greeting -->
+  <div class="greeting">
+    <h2>Good afternoon, <span class="username">Drew</span> 👋</h2>
+    <p>Stay consistent and achieve your fitness goals!</p>
+  </div>
+
+  <!-- Progress Summary -->
+  <ion-card class="progress-card">
+    <ion-card-header>
+      <ion-card-title>Your Weekly Progress</ion-card-title>
+      <ion-card-subtitle>Keep up the great work!</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Workouts Completed: <strong>4 / 5</strong></p>
+      <p>Calories Burned: <strong>1,850 kcal</strong></p>
+      <p>Active Days: <strong>4 days</strong></p>
+      <ion-progress-bar value="0.8" color="success"></ion-progress-bar>
+    </ion-card-content>
+  </ion-card>
+
+
+  <!-- Weight Lifting Section -->
+  <div class="section-header">
+    <h3>💪 Weight Lifting</h3>
+  </div>
+
+  <!-- Existing Card -->
+  <ion-card class="workout-card">
+    <ion-card-header>
+      <ion-card-title>Shoulders</ion-card-title>
+      <div class="dot blue"></div>
+      <ion-button size="small" fill="clear" slot="end">More</ion-button>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>4 × Overhead Press</li>
+        <li>4 × Dumbbell Shoulder Press</li>
+        <li>4 × Arnold Press</li>
+        <li>4 × Front Dumbbell Raise</li>
+        <li>4 × Lateral Raise</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- NEW Card -->
+  <ion-card class="workout-card">
+    <ion-card-header>
+      <ion-card-title>Chest Day</ion-card-title>
+      <div class="dot blue"></div>
+      <ion-button size="small" fill="clear" slot="end">More</ion-button>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>4 × Bench Press</li>
+        <li>4 × Incline Dumbbell Press</li>
+        <li>4 × Chest Fly</li>
+        <li>4 × Push-Ups</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+
+  <!-- Core Section -->
+  <div class="section-header">
+    <h3>🔥 Core</h3>
+  </div>
+
+  <!-- Existing Card -->
+  <ion-card class="workout-card">
+    <ion-card-header>
+      <ion-card-title>Upper & Lower</ion-card-title>
+      <div class="dot green"></div>
+      <ion-button size="small" fill="clear" slot="end">More</ion-button>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>4 × Decline Crunch</li>
+        <li>4 × Lying Leg Raise</li>
+        <li>4 × Crunch</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- NEW Card -->
+  <ion-card class="workout-card">
+    <ion-card-header>
+      <ion-card-title>Plank Focus</ion-card-title>
+      <div class="dot green"></div>
+      <ion-button size="small" fill="clear" slot="end">More</ion-button>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>3 × 60-sec Standard Plank</li>
+        <li>3 × 45-sec Side Plank</li>
+        <li>3 × 50-sec Plank with Arm Raise</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+
+  <!-- Cardio Section -->
+  <div class="section-header">
+    <h3>🏃 Cardio</h3>
+  </div>
+
+  <!-- Existing Card -->
+  <ion-card class="workout-card">
+    <ion-card-header>
+      <ion-card-title>Endurance Focus</ion-card-title>
+      <div class="dot yellow"></div>
+      <ion-button size="small" fill="clear" slot="end">More</ion-button>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>20-min HIIT Treadmill</li>
+        <li>3 × 500m Rowing</li>
+        <li>15-min Stationary Bike</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- NEW Card -->
+  <ion-card class="workout-card">
+    <ion-card-header>
+      <ion-card-title>Speed Boost</ion-card-title>
+      <div class="dot yellow"></div>
+      <ion-button size="small" fill="clear" slot="end">More</ion-button>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>5 × 100m Sprints</li>
+        <li>10-min Jump Rope</li>
+        <li>10-min Elliptical</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+
+  <!-- Gym Pass Section -->
+  <div class="section-header">
+    <h3>✅ Check In</h3>
+  </div>
+
+  <ion-card class="gym-pass">
+    <ion-card-header>
+      <ion-card-title>Gym Pass</ion-card-title>
+      <ion-card-subtitle>Active – Valid till 30 Sept</ion-card-subtitle>
+      <ion-button size="small" fill="clear" slot="end">More</ion-button>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Your entry pass for today's workout.</p>
+      <ion-button expand="block" color="primary" routerLink="/tabs/checkin">
+        <ion-icon name="log-in-outline" slot="start"></ion-icon>
+        Check In Now
+      </ion-button>
+      <ion-button expand="block" fill="outline" color="medium" routerLink="/tabs/view">
+        <ion-icon name="document-text-outline" slot="start"></ion-icon>
+        View Details
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
+
+
+<!-- ================== CSS ================== -->
+<style>
+ion-content::part(scroll) {
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+
+
+  ion-content {
+    --background: #f9f9f9;
+  }
+
+  /* Legend for colors */
+  .legend {
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    border-radius: 12px;
+    padding: 8px 0;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  .legend div {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .legend .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+  .dot.blue { background: #3880ff; }
+  .dot.green { background: #10dc60; }
+  .dot.yellow { background: #ffce00; }
+
+  /* Greeting section */
+  .greeting {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .greeting h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 4px;
+  }
+  .greeting .username {
+    color: var(--ion-color-primary);
+  }
+  .greeting p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+  }
+
+  /* Section headers */
+  .section-header {
+    margin: 25px 0 10px;
+    border-left: 5px solid var(--ion-color-primary);
+    padding-left: 8px;
+  }
+  .section-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  /* Progress card */
+  .progress-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ffffff, #f0f5ff);
+  }
+  ion-progress-bar {
+    margin-top: 10px;
+    height: 8px;
+    border-radius: 5px;
+  }
+
+  /* Workout cards */
+  .workout-card {
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    background: #fff;
+    position: relative;
+  }
+  .workout-card .dot {
+    position: absolute;
+    top: 18px;
+    right: 50px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+  }
+  .workout-card ul {
+    padding-left: 18px;
+    margin: 0;
+  }
+  .workout-card ul li {
+    font-size: 0.95rem;
+    margin: 4px 0;
+  }
+
+  /* Gym pass */
+  .gym-pass {
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    background: linear-gradient(135deg, #ffffff, #f3f9ff);
+  }
+  .gym-pass p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 12px;
+  }
+
+  ion-card-title {
+    font-weight: 600;
+  }
+</style>

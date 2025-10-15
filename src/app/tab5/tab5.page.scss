@@ -1,0 +1,120 @@
+/* 🌿 Relaxing background for the entire page */
+ion-content {
+    --background: #f0f4f8; /* soft pastel blue-gray */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 0.8s ease;
+  }
+  
+  /* App Header */
+  .app-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .app-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .app-name {
+    font-size: 1.8rem;
+    color: #0077b6;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .app-subtitle {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  /* 🪪 Container for form items */
+  ion-item {
+    background: #ffffff; /* clean white for each input */
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --inner-padding-start: 10px;
+  }
+  
+  /* 👆 Floating label styling */
+  ion-label {
+    color: #555;
+    font-weight: 500;
+  }
+  
+  ion-input, ion-textarea {
+    font-size: 1rem;
+    color: #222;
+  }
+  
+  /* 👤 Profile Picture input styling */
+  input[type="file"] {
+    border-radius: 10px;
+    padding: 8px;
+    border: 1px solid #c0c0c0;
+    width: 100%;
+    font-size: 0.9rem;
+    background: #f7fbff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  input[type="file"]:hover {
+    border-color: #0077b6;
+    box-shadow: 0 2px 6px rgba(0, 119, 182, 0.2);
+  }
+  
+  /* 👇 Save button styling */
+  ion-button {
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+    --box-shadow: 0 6px 20px rgba(0, 150, 136, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+  }
+  
+  ion-button:hover {
+    transform: scale(1.03);
+    --box-shadow: 0 8px 25px rgba(0, 150, 136, 0.35);
+  }
+  
+  /* 👇 Inputs focus effect */
+  ion-input:focus, ion-textarea:focus {
+    border-bottom: 2px solid #0077b6;
+    outline: none;
+  }
+  
+  /* 🧘 Smooth fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  /* 👇 Responsive width for large screens */
+  @media (min-width: 768px) {
+    ion-content {
+      max-width: 450px;
+      margin: 0 auto;
+    }
+  }
+  

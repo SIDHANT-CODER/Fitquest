@@ -1,6 +1,13 @@
 import { Component, EnvironmentInjector, inject } from '@angular/core';
-import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel } from '@ionic/angular/standalone';
-import { addIcons } from 'ionicons';
+import {
+  IonTabs,
+  IonTabBar,
+  IonTabButton,
+  IonIcon,
+  IonLabel,
+  LoadingController
+} from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons'; 
 import { triangle, ellipse, square } from 'ionicons/icons';
 
 @Component({
@@ -11,8 +18,21 @@ import { triangle, ellipse, square } from 'ionicons/icons';
 })
 export class TabsPage {
   public environmentInjector = inject(EnvironmentInjector);
+  private loadingCtrl = inject(LoadingController);
 
   constructor() {
     addIcons({ triangle, ellipse, square });
+  }
+
+  // 🔹 Called when tab changes
+  async onTabChange() {
+    const loading = await this.loadingCtrl.create({
+      message: 'Loading...',
+      spinner: 'crescent',
+      duration: 100, 
+      cssClass: 'custom-loading',
+    });
+
+    await loading.present();
   }
 }

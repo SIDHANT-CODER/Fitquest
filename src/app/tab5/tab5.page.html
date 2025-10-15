@@ -1,0 +1,55 @@
+<ion-content class="ion-padding">
+  <!-- App Header with Logo -->
+  <div class="app-header">
+    <img src="https://github.com/SIDHANT-CODER/important_assets/blob/main/Screenshot%202025-09-10%20135018.png?raw=true" alt="FitQuest Logo" class="app-logo">
+    <h1 class="app-name">FitQuest</h1>
+    <h2 class="app-subtitle">Be Fit with FitQuest</h2>
+  </div>
+
+  <!-- User Form -->
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <br>
+    <ion-input [(ngModel)]="user.name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <br>
+    <ion-input [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Height (cm)</ion-label>
+    <br>
+    <ion-input type="number" [(ngModel)]="user.height" (ionChange)="calculateBMI()"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Weight (kg)</ion-label>
+    <br>
+    <ion-input type="number" [(ngModel)]="user.weight" (ionChange)="calculateBMI()"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">BMI</ion-label>
+    <br>
+    <ion-input readonly [value]="user.bmi"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Bio</ion-label>
+    <br>
+    <ion-textarea [(ngModel)]="user.bio"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Profile Picture</ion-label>
+    <br>
+    <input type="file" (change)="onImageSelected($event)">
+  </ion-item>
+
+  <ion-button expand="block" shape="round" color="success" (click)="saveProfile()">
+    Save & Go to Profile
+  </ion-button>
+</ion-content>

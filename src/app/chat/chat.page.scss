@@ -1,0 +1,65 @@
+.chat-list {
+    padding: 10px;
+  }
+  
+  .sent-msg {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 6px;
+  }
+  
+  .sent-msg ion-label {
+    background: #25d366;
+    color: #fff;
+    border-radius: 18px;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    max-width: 75%;
+    word-wrap: break-word;
+  }
+  
+  .received-msg {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 6px;
+  }
+  
+  .received-msg ion-label {
+    background: #f0f0f0;
+    color: #000;
+    border-radius: 18px;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    max-width: 75%;
+    word-wrap: break-word;
+  }
+  
+  .time {
+    display: block;
+    font-size: 0.7rem;
+    margin-top: 3px;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .chat-input-wrapper {
+    display: flex;
+    padding: 8px;
+    border-top: 1px solid #ddd;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+  }
+  
+  .chat-input-wrapper ion-input {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    margin-right: 8px;
+  }
+  

@@ -1,0 +1,185 @@
+<ion-header>
+  <ion-toolbar color="light">
+
+    <!-- Left Back Button -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+
+    <!-- Center Title -->
+    <ion-title class="ion-text-center">Back & Biceps</ion-title>
+
+    <!-- Right Icon -->
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="barbell-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="back-page">
+
+  <!-- Hero Banner -->
+  <div class="hero-banner">
+    <h2>Build a Strong Back & Bigger Biceps 💪</h2>
+    <p>Master compound & isolation workouts to grow strength and size.</p>
+  </div>
+
+  <!-- Workouts List -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label><strong>Workouts</strong></ion-label>
+    </ion-list-header>
+
+    <ion-card class="workout-card">
+      <ion-card-header>
+        <ion-card-title>Pull-Ups</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="fitness-outline" class="workout-icon"></ion-icon>
+        <p>Best bodyweight exercise for building wide lats and stronger arms.</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="workout-card">
+      <ion-card-header>
+        <ion-card-title>Deadlifts</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="barbell-outline" class="workout-icon"></ion-icon>
+        <p>Targets the entire posterior chain including back, traps, and biceps as stabilizers.</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="workout-card">
+      <ion-card-header>
+        <ion-card-title>Barbell Rows</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="trending-up-outline" class="workout-icon"></ion-icon>
+        <p>Builds mid-back thickness and helps with overall pulling strength.</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="workout-card">
+      <ion-card-header>
+        <ion-card-title>Bicep Curls</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="walk-outline" class="workout-icon"></ion-icon>
+        <p>Isolation exercise for biceps peak and size.</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="workout-card">
+      <ion-card-header>
+        <ion-card-title>Hammer Curls</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="body-outline" class="workout-icon"></ion-icon>
+        <p>Focuses on forearms and brachialis for thicker arms.</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <!-- Benefits Section -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label><strong>Benefits</strong></ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-icon name="checkmark-circle-outline" slot="start" color="success"></ion-icon>
+      <ion-label>Improves posture & reduces back pain risk</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="checkmark-circle-outline" slot="start" color="success"></ion-icon>
+      <ion-label>Increases pulling & grip strength</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="checkmark-circle-outline" slot="start" color="success"></ion-icon>
+      <ion-label>Enhances arm aesthetics & thickness</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="checkmark-circle-outline" slot="start" color="success"></ion-icon>
+      <ion-label>Supports overall compound lifts like bench & squat</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Reps & Sets Recommendation -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Recommended Reps & Sets</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>🔥 For Strength: <strong>4–6 reps × 4–5 sets</strong></p>
+      <p>💪 For Hypertrophy: <strong>8–12 reps × 3–4 sets</strong></p>
+      <p>🏋️ For Endurance: <strong>15–20 reps × 2–3 sets</strong></p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Motivation Card -->
+  <ion-card class="motivation-card ion-text-center">
+    <ion-card-content>
+      <ion-icon name="flash-outline" class="big-icon"></ion-icon>
+      <h3 class="ion-margin-top">"A strong back makes a strong lifter – train smart 🔥"</h3>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!-- Custom CSS -->
+<style>
+  .hero-banner {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 30px 16px;
+    border-radius: 20px;
+    margin: 12px;
+  }
+
+  .hero-banner h2 {
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .workout-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    margin-bottom: 12px;
+  }
+
+  .workout-card ion-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .workout-card p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 6px;
+  }
+
+  .workout-icon {
+    font-size: 28px;
+    color: #3880ff;
+    margin-right: 8px;
+  }
+
+  .motivation-card {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    padding: 18px;
+    border-radius: 16px;
+    margin: 16px;
+  }
+
+  .big-icon {
+    font-size: 40px;
+    color: white;
+  }
+</style>

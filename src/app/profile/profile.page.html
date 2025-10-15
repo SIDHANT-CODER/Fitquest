@@ -1,0 +1,237 @@
+<ion-header>
+  <ion-toolbar color="light">
+
+    <!-- Back Button -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/setting"></ion-back-button>
+    </ion-buttons>
+
+    <!-- Title -->
+    <ion-title class="ion-text-center">My Profile</ion-title>
+
+    <!-- Settings Icon -->
+    <ion-buttons slot="end">
+      <ion-button  routerLink="/setting-profile">
+        <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="profile-page">
+
+  <!-- Profile Header -->
+  <div class="profile-header">
+    <img src="\assets\img\me.png" alt="User Avatar" class="profile-pic">
+    <h2>Sidhant Pandey<span class="age">(20 yrs)</span></h2>
+    <p class="username">@pandeyfitness</p>
+  </div>
+
+  <!-- User Info -->
+  <ion-list class="info-list">
+    <ion-list-header>
+      <ion-label><strong>Personal Info</strong></ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-icon name="call-outline" slot="start" color="primary"></ion-icon>
+      <ion-label>+91 9876543210</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="mail-outline" slot="start" color="primary"></ion-icon>
+      <ion-label>sidhant@email.com</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="person-outline" slot="start" color="primary"></ion-icon>
+      <ion-label>Male</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="location-outline" slot="start" color="primary"></ion-icon>
+      <ion-label>Lucknow, India</ion-label>
+    </ion-item>
+
+    <!-- Button to go back to Tab1 -->
+    <ion-item lines="none">
+      <ion-button expand="block" routerLink="/tabs/tab1" color="primary">
+        Go to Home
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Body Measurements -->
+  <ion-list class="info-list">
+    <ion-list-header>
+      <ion-label><strong>Body Measurements</strong></ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-icon name="body-outline" slot="start" color="success"></ion-icon>
+      <ion-label>Height: 180 cm</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="barbell-outline" slot="start" color="success"></ion-icon>
+      <ion-label>Weight: 68 kg</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="pulse-outline" slot="start" color="success"></ion-icon>
+      <ion-label>BMI: 22.9 (Normal)</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Fitness Stats -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="stat-card stat-1">
+          <ion-card-content routerLink="/tabs/calories">
+            <ion-icon name="flame-outline"></ion-icon>
+            <h2>12,340</h2>
+            <p>Calories Burnt</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="stat-card stat-2">
+          <ion-card-content>
+            <ion-icon name="fitness-outline"></ion-icon>
+            <h2>85</h2>
+            <p>Workouts</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Goals Section -->
+  <ion-list class="info-list">
+    <ion-list-header>
+      <ion-label><strong>Fitness Goals</strong></ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-icon name="checkmark-done-outline" slot="start" color="tertiary"></ion-icon>
+      <ion-label>Build muscle mass</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="checkmark-done-outline" slot="start" color="tertiary"></ion-icon>
+      <ion-label>Maintain 12% body fat</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="checkmark-done-outline" slot="start" color="tertiary"></ion-icon>
+      <ion-label>Improve stamina & endurance</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Motivation Card -->
+  <ion-card class="motivation-card ion-text-center">
+    <ion-card-content>
+      <ion-icon name="sparkles-outline" class="big-icon"></ion-icon>
+      <h3 class="ion-margin-top">"Be stronger than your excuses 🌟"</h3>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!-- CSS -->
+<style>
+  .profile-header {
+    text-align: center;
+    padding: 30px 16px 20px;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    border-radius: 0 0 30px 30px;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 10px;
+  }
+
+  .profile-header h2 {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .profile-header .age {
+    font-size: 14px;
+    font-weight: normal;
+    color: #555;
+  }
+
+  .username {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .info-list ion-item {
+    --padding-start: 12px;
+    --inner-padding-end: 12px;
+    font-size: 15px;
+  }
+
+  .stat-card {
+    text-align: center;
+    padding: 16px;
+    color: white;
+    border-radius: 18px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .stat-card ion-icon {
+    font-size: 28px;
+    margin-bottom: 6px;
+    color: white;
+  }
+
+  .stat-card h2 {
+    margin: 4px 0;
+    font-weight: bold;
+    color: white;
+  }
+
+  .stat-card p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+  }
+
+  .stat-card:hover {
+    transform: scale(1.05);
+  }
+
+  .stat-1 {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+  }
+
+  .stat-2 {
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+  }
+
+  .motivation-card {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    color: white;
+    padding: 18px;
+    border-radius: 16px;
+    margin: 16px;
+  }
+
+  .big-icon {
+    font-size: 40px;
+    color: white;
+  }
+
+  /* Button Styling */
+  ion-button[routerLink] {
+    font-weight: bold;
+    border-radius: 12px;
+  }
+</style>

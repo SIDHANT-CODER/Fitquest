@@ -1,0 +1,153 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/setting"></ion-back-button>
+    </ion-buttons>
+    <ion-title>App Themes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding theme-page">
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <ion-icon name="color-palette-outline" class="hero-icon"></ion-icon>
+    <h1 class="hero-title">Customize Your Look</h1>
+    <p class="hero-subtitle">
+      Choose a theme that fits your style and makes the app truly yours.
+    </p>
+  </div>
+
+  <!-- Light Theme -->
+  <ion-card class="theme-card light-theme-card">
+    <ion-card-header>
+      <ion-card-title>Light Theme</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Enjoy a bright and clean look, perfect for daytime use.</p>
+      <ion-toggle [(ngModel)]="lightMode" (ionChange)="setTheme('light')" color="primary">
+      </ion-toggle>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Dark Theme -->
+  <ion-card class="theme-card dark-theme-card">
+    <ion-card-header>
+      <ion-card-title>Dark Theme</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Reduce eye strain and save battery with our sleek dark mode.</p>
+      <ion-toggle [(ngModel)]="darkMode" (ionChange)="setTheme('dark')" color="secondary">
+      </ion-toggle>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Auto Theme -->
+  <ion-card class="theme-card auto-theme-card">
+    <ion-card-header>
+      <ion-card-title>Auto Theme</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Automatically switches between light and dark based on your device settings.</p>
+      <ion-toggle [(ngModel)]="autoMode" (ionChange)="setTheme('auto')" color="tertiary">
+      </ion-toggle>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!-- Inline CSS -->
+<style>
+  .theme-page {
+    --background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+    transition: background 0.3s ease;
+  }
+
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .hero-icon {
+    font-size: 4rem;
+    color: var(--ion-color-primary);
+    margin-bottom: 10px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--ion-color-primary);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+    padding: 0 15px;
+  }
+
+  /* Theme Cards */
+  .theme-card {
+    margin-bottom: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .light-theme-card {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .dark-theme-card {
+    background: #1e1e1e;
+    color: #f9f9f9;
+  }
+
+  .auto-theme-card {
+    background: linear-gradient(45deg, #f3f7fb, #e1ecff);
+    color: #000;
+  }
+
+  ion-card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--ion-color-primary);
+  }
+
+  ion-card-content p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+  }
+
+  .dark-theme-card ion-card-title {
+    color: #ffd966;
+  }
+
+  .dark-theme-card p {
+    color: #ddd;
+  }
+
+  ion-toggle {
+    float: right;
+    transform: scale(1.2);
+    margin-top: -10px;
+  }
+
+  /* --- Theme Classes for Body --- */
+  body.light {
+    --ion-background-color: #ffffff;
+    --ion-text-color: #000000;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  body.dark {
+    --ion-background-color: #121212;
+    --ion-text-color: #ffffff;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+</style>

@@ -1,0 +1,288 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title style="display: flex; align-items: center;">
+      <img
+        src="https://github.com/SIDHANT-CODER/important_assets/blob/main/Screenshot%202025-09-10%20135018.png?raw=true"
+        style="height: 40px; vertical-align: middle; margin-right: 8px;"
+      />
+      <span class="app-title">FitQuest</span>
+    </ion-title>
+
+    <!-- Sign In Button -->
+    <ion-buttons slot="end">
+      <ion-button routerLink="/tabs/tab5">
+        <ion-icon slot="icon-only" name="log-in-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding landing-page">
+
+  <!-- Hero Section -->
+  <ion-card color="light" class="fade-in-card">
+    <div class="hero-img-container">
+      <img
+        src="assets/img/fit.png"
+        alt="App Overview"
+        class="hero-img"
+      />
+    </div>
+
+    <ion-card-header>
+      <ion-card-title class="slide-up">Welcome to MyApp</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="fade-in">
+      Organize your life, track your progress, and stay productive. Everything you need in one app!
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Why This App -->
+  <ion-card color="secondary" class="slide-up-delay">
+    <ion-card-header>
+      <ion-card-title>Why This App?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <img
+        src="assets/img/why.png"
+        alt="Why App"
+        style="width: 100%; margin-bottom: 10px; border-radius: 8px;"
+      />
+      This app simplifies your daily tasks, saves time, and keeps everything in one place.
+      Designed for students, professionals, and hobbyists alike.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Key Features -->
+  <ion-card color="tertiary" class="fade-in-delay">
+    <ion-card-header>
+      <ion-card-title>Key Features</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" class="ion-text-center">
+            <ion-icon name="checkmark-circle-outline" size="large" class="icon-bounce"></ion-icon>
+            <p>Track Progress</p>
+          </ion-col>
+          <ion-col size="6" class="ion-text-center">
+            <ion-icon name="calendar-outline" size="large" class="icon-bounce"></ion-icon>
+            <p>Organize Activities</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6" class="ion-text-center">
+            <ion-icon name="notifications-outline" size="large" class="icon-bounce"></ion-icon>
+            <p>Get Reminders</p>
+          </ion-col>
+          <ion-col size="6" class="ion-text-center">
+            <ion-icon name="lock-closed-outline" size="large" class="icon-bounce"></ion-icon>
+            <p>Secure Data</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- How It Works -->
+  <ion-card color="success" class="slide-up-delay2">
+    <ion-card-header>
+      <ion-card-title>How It Works</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <img
+        src="assets/img/how.png"
+        alt="How It Works"
+        style="width: 100%; border-radius: 8px; margin-bottom: 10px;"
+      />
+      1. Sign up or continue as a guest.<br />
+      2. Set up your profile and preferences.<br />
+      3. Add your daily tasks, exercises, or activities.<br />
+      4. Track progress, view analytics, and get reminders.<br />
+      5. Export your data anytime or sync across devices.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Testimonials -->
+  <ion-card color="warning" class="fade-in-delay2">
+    <ion-card-header>
+      <ion-card-title>What Users Say</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-avatar slot="start" style="width: 60px; height: 60px;">
+          <img src="assets/img/user1.png" style="width: 100%; height: 100%;" />
+        </ion-avatar>
+        <ion-label>
+          "This app has completely changed how I organize my day. Super easy to use!" –
+          <strong>Alex P.</strong>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start" style="width: 60px; height: 60px;">
+          <img src="assets/img/user2.png" style="width: 100%; height: 100%;" />
+        </ion-avatar>
+        <ion-label>
+          "I love the colorful interface and tracking system. Highly recommended!" –
+          <strong>Maria S.</strong>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Supported Platforms -->
+  <ion-card color="danger" class="slide-up-delay3">
+    <ion-card-header>
+      <ion-card-title>Supported Platforms</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="ion-text-center">
+      <img
+        src="assets/img/platforms.png"
+        alt="Platforms"
+        style="width: 70%; margin: 10px auto; display: block;"
+      />
+      Works on Android, iOS, and Web. Access your account from any device and stay synced.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- FAQ Section -->
+  <ion-card color="medium" class="fade-in-delay3">
+    <ion-card-header>
+      <ion-card-title>FAQ</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>
+            <strong>Q:</strong> Is the app free to use?<br />
+            <strong>A:</strong> Yes, the basic features are completely free.
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <strong>Q:</strong> Can I backup my data?<br />
+            <strong>A:</strong> Absolutely! Data is automatically synced and can be exported anytime.
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <strong>Q:</strong> Is it suitable for beginners?<br />
+            <strong>A:</strong> Yes! The app is designed to be simple and intuitive for all users.
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Motivational Banner -->
+  <ion-card color="primary" class="fade-in-delay4 ion-text-center">
+    <ion-card-content>
+      <h2>Ready to boost your productivity?</h2>
+      <p>Start your journey now and make every day count!</p>
+      <img src="assets/img/motivation.png" style="width: 100%; border-radius: 8px;" />
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Get Started Button -->
+  <ion-footer>
+    <ion-button expand="block" color="secondary" routerLink="/tabs/tab5" class="pulse-btn">
+      Get Started
+    </ion-button>
+  </ion-footer>
+</ion-content>
+
+<style>
+/* Hero image float animation */
+.hero-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-img {
+  height: 80%;
+  width: 80%;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Smooth card entry animations */
+.fade-in-card {
+  animation: fadeIn 1.2s ease-in-out;
+}
+.fade-in {
+  animation: fadeIn 1.8s ease-in-out;
+}
+.slide-up {
+  animation: slideUp 1.5s ease-out;
+}
+.slide-up-delay {
+  animation: slideUp 1.5s ease-out 0.4s both;
+}
+.slide-up-delay2 {
+  animation: slideUp 1.5s ease-out 0.7s both;
+}
+.slide-up-delay3 {
+  animation: slideUp 1.5s ease-out 1s both;
+}
+.fade-in-delay {
+  animation: fadeIn 1.5s ease-in-out 0.3s both;
+}
+.fade-in-delay2 {
+  animation: fadeIn 1.5s ease-in-out 0.6s both;
+}
+.fade-in-delay3 {
+  animation: fadeIn 1.5s ease-in-out 0.9s both;
+}
+.fade-in-delay4 {
+  animation: fadeIn 1.5s ease-in-out 1.2s both;
+}
+
+/* Keyframes for smooth movement */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Icon bounce animation */
+.icon-bounce {
+  animation: bounce 2.5s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Pulsing Get Started button */
+.pulse-btn {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(88, 86, 214, 0.6); }
+  70% { transform: scale(1.05); box-shadow: 0 0 10px 8px rgba(88, 86, 214, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(88, 86, 214, 0); }
+}
+
+/* Fancy title effect */
+.app-title {
+  font-weight: bold;
+  font-size: 1.3em;
+  letter-spacing: 0.5px;
+  animation: shimmer 3s infinite linear;
+  background: linear-gradient(90deg, #e04545, #03fc4e, #407ac7);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+@keyframes shimmer {
+  0% { background-position: -200px; }
+  100% { background-position: 200px; }
+}
+</style>

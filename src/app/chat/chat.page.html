@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="light">
+
+    <!-- Back Button + Image on the Left -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+      <img src=""
+           style="height:28px; margin-left:8px;" />
+    </ion-buttons>
+
+    <!-- Title in the Center -->
+    <ion-title>Sumit Kumar</ion-title>
+
+    <!-- Call and Video Call Icons on the Right -->
+    <ion-buttons slot="end">
+      <!-- Voice Call -->
+      <ion-button>
+        <ion-icon slot="icon-only" name="call-outline"></ion-icon>
+      </ion-button>
+
+      <!-- Video Call -->
+      <ion-button>
+        <ion-icon slot="icon-only" name="videocam-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="chat-list">
+  <br>
+
+  <!-- Loop through messages -->
+  <div *ngFor="let msg of messages" 
+       [ngClass]="msg.sentBy === 'me' ? 'sent-msg' : 'received-msg'">
+    <ion-label>
+      {{ msg.text }}
+      <span class="time">{{ msg.time }}</span>
+    </ion-label>
+  </div>
+
+</ion-content>
+
+<!-- Input Area -->
+<div class="chat-input-wrapper">
+  <ion-input [(ngModel)]="newMessage" placeholder="Type a message"></ion-input>
+  <ion-button fill="clear" (click)="sendMessage()">
+    <ion-icon name="send-outline"></ion-icon>
+  </ion-button>
+</div>
+

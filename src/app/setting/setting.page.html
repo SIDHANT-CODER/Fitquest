@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <!-- ===== Account Section ===== -->
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>Account</ion-label>
+    </ion-list-header>
+
+    <ion-item button routerLink="/tabs/profile">
+      <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+      <ion-label>Profile</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item button routerLink="/tabs/change-password">
+      <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+      <ion-label>Change Password</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <!-- ===== Notifications Section ===== -->
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>Notifications</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-icon slot="start" name="notifications-outline"></ion-icon>
+      <ion-label>Push Notifications</ion-label>
+      <ion-toggle slot="end" [(ngModel)]="pushNotifications" (ionChange)="togglePush($event)"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" name="mail-outline"></ion-icon>
+      <ion-label>Email Notifications</ion-label>
+      <ion-toggle slot="end" [(ngModel)]="emailNotifications" (ionChange)="toggleEmail($event)"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <!-- ===== Preferences Section ===== -->
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>Preferences</ion-label>
+    </ion-list-header>
+
+    <ion-item button routerLink="/tabs/theme">
+      <ion-icon slot="start" name="color-palette-outline"></ion-icon>
+      <ion-label>Theme</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item button routerLink="/tabs/language">
+      <ion-icon slot="start" name="language-outline"></ion-icon>
+      <ion-label>Language</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <!-- ===== Security Section ===== -->
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>Security</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-icon slot="start" name="finger-print-outline"></ion-icon>
+      <ion-label>Use Fingerprint</ion-label>
+      <ion-toggle slot="end" [(ngModel)]="fingerprintAuth" (ionChange)="toggleFingerprint($event)"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" name="shield-checkmark-outline"></ion-icon>
+      <ion-label>Two-Factor Authentication</ion-label>
+      <ion-toggle slot="end" [(ngModel)]="twoFA" (ionChange)="toggle2FA($event)"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <!-- ===== About Section ===== -->
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>About</ion-label>
+    </ion-list-header>
+
+    <ion-item button routerLink="/tabs/privacy">
+      <ion-icon slot="start" name="document-text-outline"></ion-icon>
+      <ion-label>Privacy Policy</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item button routerLink="/tabs/developer">
+      <ion-icon slot="start" name="file-tray-full-outline"></ion-icon>
+      <ion-label>Developer Details</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item button routerLink="/tabs/tab4" >
+      <ion-icon slot="start" name="log-out-outline"></ion-icon>
+      <ion-label>Logout</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

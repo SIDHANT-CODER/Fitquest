@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/setting"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Language Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding language-page">
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <ion-icon name="language-outline" class="hero-icon"></ion-icon>
+    <h1 class="hero-title">Select Your Language</h1>
+    <p class="hero-subtitle">
+      Choose your preferred language for the app.
+    </p>
+  </div>
+
+  <!-- Language Selection -->
+  <ion-radio-group [(ngModel)]="selectedLanguage">
+    <ion-card class="lang-card" *ngFor="let lang of languages">
+      <ion-card-header>
+        <ion-card-title>{{ lang.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ lang.description }}</p>
+        <ion-radio slot="end" [value]="lang.code"></ion-radio>
+      </ion-card-content>
+    </ion-card>
+  </ion-radio-group>
+
+  <!-- Current Selection -->
+  <ion-card class="current-selection">
+    <ion-card-header>
+      <ion-card-title>Current Language</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ getSelectedLanguageName() }}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!-- Inline CSS -->
+<style>
+  .language-page {
+    --background: linear-gradient(to bottom, #fdfbfb, #f1f5f9);
+  }
+
+  .hero {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .hero-icon {
+    font-size: 4rem;
+    color: var(--ion-color-primary);
+    margin-bottom: 10px;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--ion-color-primary);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+  }
+
+  .lang-card, .current-selection {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .lang-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  }
+
+  ion-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ion-color-primary);
+  }
+
+  ion-card-content p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+  }
+
+  ion-radio {
+    --size: 24px;
+  }
+</style>

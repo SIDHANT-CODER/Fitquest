@@ -1,5 +1,5 @@
 <!-- ===== Side Menu ===== -->
-<ion-menu contentId="main-content" side="start" menuId="main-menu">
+<ion-menu contentId="tab1-content" side="start" menuId="main-menu">
   <ion-header>
     <ion-toolbar color="primary">
       <ion-title>Menu</ion-title>
@@ -19,12 +19,11 @@
   </ion-content>
 </ion-menu>
 
-<!-- ===== Main Content Wrapper ===== -->
-<div id="main-content">
+<!-- ===== Main Content ===== -->
 
-  <!-- ===== Header ===== -->
-  <ion-header>
-    <ion-toolbar color="light">
+<!-- ===== Header ===== -->
+<ion-header>
+  <ion-toolbar color="light">
 
       <!-- Left: Menu Button -->
       <ion-buttons slot="start">
@@ -46,11 +45,11 @@
           <ion-icon name="notifications-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+  </ion-toolbar>
+</ion-header>
 
-  <!-- ===== Page Content ===== -->
-  <ion-content fullscreen class="home-activity-page">
+<!-- ===== Page Content ===== -->
+<ion-content fullscreen class="home-activity-page" id="tab1-content">
 
     <!-- ===== Your Workouts ===== -->
     <ion-list lines="none">
@@ -286,7 +285,6 @@
     </ion-card>
 
   </ion-content>
-</div>
 <style>
   /* ===== General Page Styling ===== */
   ion-content::part(scroll) {

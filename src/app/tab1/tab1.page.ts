@@ -1,5 +1,18 @@
 import { Component } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
+import {
+  IonMenu,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonButtons,
+  IonMenuButton,
+  IonIcon,
+  IonButton,
+  IonContent,
+  IonList,
+  IonItem,
+  IonLabel
+} from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -7,7 +20,21 @@ import { RouterLink } from '@angular/router';
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
   standalone: true,
-  imports: [IonicModule, RouterLink],
+  imports: [
+    RouterLink,
+    IonMenu,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonButtons,
+    IonMenuButton,
+    IonIcon,
+    IonButton,
+    IonContent,
+    IonList,
+    IonItem,
+    IonLabel
+  ],
 })
 export class Tab1Page {
   constructor() {}
